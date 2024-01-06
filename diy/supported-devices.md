@@ -1,10 +1,4 @@
----
-title: 'Supported Devices'
-description: 'Recommended Dev-Boards for Deauther'
-sidebar_position: 10
----
-
-import Button from '@mui/material/Button';
+___
 
 The most important things first:
 * Any ESP8266-based development board can run the Deauther firmware
@@ -17,9 +11,6 @@ The sheer amount of different boards available can create uncertainty about whic
 So here we've compiled a small list of boards we can recommend.
 Feel free to use this list not only for the Deauther project but as a recommendation for good ESP8266 development boards in general.
 
-:::tip
-If you want to learn more about the ESP8266 and how it is different from a development board, check out [NodeMCU vs. ESP8266](https://blog.spacehuhn.com/nodemcu-vs-esp8266/).
-:::
 
 ## NodeMCU
 
@@ -47,9 +38,8 @@ A significant pro or con, depending on your project, is that the included header
 Another important note is that this board is widely known as WEMOS D1 Mini, but the original creators actually rebranded to LOLIN. Here is a link to their [Aliexpress store](https://lolin.aliexpress.com/store/1331105). The original boards might be slightly more expensive than from other AliExpress shops but also of higher quality.
 
 Affiliate links:  
-<Button href='https://amzn.to/3DLaBYg' target='_blank' variant='contained'>Amazon</Button>&nbsp;
-<Button href='https://s.click.aliexpress.com/e/_ADk3lh' target='_blank' variant='contained'>AliExpress</Button>
-
+- https://amzn.to/3DLaBYg
+- https://s.click.aliexpress.com/e/_ADk3lh
 ## Adafruit Feather HUZZAH with ESP8266
 
 ![Adafruit Feather HUZZAH with ESP8266 - source https://www.adafruit.com/product/2821](/img/devices/featherhuzzah.jpg)
@@ -62,4 +52,7 @@ Documentation and tutorials can be found at [learn.adafruit.com](https://learn.a
 If you want an easy way to add a battery to your Deauther, this is the board for you.  
 (You can flash it with the same .bin file as the NodeMCU)
 
-<Button href='https://www.adafruit.com/product/2821' target='_blank' variant='contained'>Visit Adafruit.com</Button>
+- https://www.adafruit.com/product/2821
+___ ,lp[]
+412+33+3
+  
