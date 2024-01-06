@@ -1,11 +1,4 @@
----
-title: 'Upload Errors'
-description: 'How to deal with "timed out waiting for packet header"'
-sidebar_position: 50
----
-
-import Button from '@mui/material/Button';
-
+____
 ## "error: espcomm_open failed"
 
 ![ESP8266 upload error in Arduino](/img/diy/espcomm.png)
@@ -113,3 +106,5 @@ Make sure no other software is using the serial port.
 If nothing seems to work, try it on another computer.
 
 Still no luck? If you have tried everything mentioned here, and nothing seems to work, then maybe the hardware has an issue. Unfortunately, this can happen, especially with cheap development boards. Try reaching out to the seller or manufacturer. 
+
+____
