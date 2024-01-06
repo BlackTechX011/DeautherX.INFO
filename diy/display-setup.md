@@ -1,9 +1,4 @@
----
-title: 'Display & Button Setup'
-description: 'How to connect a display and buttons to the Deauther.'
-sidebar_position: 40
----
-
+____
 ## Before you continue
 Using the display interface is entirely optional. You can also control the Deauther via serial or the web interface.  
 
@@ -11,10 +6,6 @@ We cannot start at 0 for this tutorial, so if you find this too tricky, get an A
 
 I focused on the NodeMCU in this tutorial since it is one of the most popular dev-boards. But every other ESP8266-based board should work just the same.  
 
-:::tip
-I made a custom PCB called HackHeld that makes it easier to build your own Deauther with a display.
-Learn more at [hackheld.spacehuhn.com](https://hackheld.spacehuhn.com).
-:::
 
 ## What you need
 - A breadboard ([Amazon*](https://amzn.to/3HtxH9y), [AliExpress*](https://s.click.aliexpress.com/e/_DDdF6Tt))
@@ -26,11 +17,6 @@ Learn more at [hackheld.spacehuhn.com](https://hackheld.spacehuhn.com).
 - Optional but recommended: 2x 10k ohm resistors ([Amazon*](https://amzn.to/3PpEeEm), [AliExpress*](https://s.click.aliexpress.com/e/_DlZSG8x))
 - A working Arduino IDE setup that can compile this project (see [Installation](/docs/diy/installation-arduino))
 
-*Affiliate Links
-
-:::tip
-For beginners, we recommend using 3 buttons (you can add more later), an i2c display (those with 4 pins), and (optional) a Neopixel as RGB LED. 
-::: 
 
 ## Wire everything up
 Look up the pinout references for your board. Here's one for the NodeMCU: 
@@ -54,30 +40,6 @@ We have a limited amount of pins, and not every pin can be used for everything:
 | SD2         | GPIO 9  | Used for Flash. Avoid this pin in QIO mode. |
 | SD3         | GPIO 10 | Used for Flash. Avoid this pin in QIO mode. |
 
-### Display
-
-2 types of OLED displays can be used for this project. The SSD1306, and the SH1106:  
-
-![SSD1306 vs SH1106](/img/diy/ssd1306_sh1106_display.jpg)
-
-And they are available in I2C or SPI versions:  
-
-![I2C vs SPI displays](/img/diy/i2c_spi_display.jpg)
-
-I2C can be connected to any GPIO pin (except 16).  
-
-SPI, however, requires the following setup:
-
-| Display | GPIO |
-| ------- | ---- |
-| SCL/CLK/SCK | GPIO 14 (D5) |
-| SDA/MOSI | GPIO 13 (D7) |
-
-RST, DC, and CS pins can be connected to other pins. 
-
-:::tip
-Please make a list of all components and their connections. It might save you a lot of troubleshooting later.
-:::
 
 ### Buttons
 Connect each button to a GPIO and GND. 
@@ -89,9 +51,8 @@ You can use single digital LEDs, an RGB LED, or a Neopixel LED (WS2812b).
 
 By default, the LED on GPIO 16 (NodeMCU onboard LED) and the LED on GPIO 2 (ESP-12 and ESP-07 on-module LED) are used.
 
-## Example setup with I2C OLED
+## setup with I2C OLED
 
-![I2C example build](/img/diy/example_built_i2c.jpg)
 
 | Display | GPIO |
 | ------- | ---- |
@@ -110,58 +71,15 @@ By default, the LED on GPIO 16 (NodeMCU onboard LED) and the LED on GPIO 2 (ESP-
 | ------ | ---- |
 | GND | GND |
 | VCC | VCC/3.3V |
-| DIN | GPIO 9 (SD2) |
+| DIN | GPIO 15 (D8) |
 
-## Example setup with SPI OLED
-
-![SPI example build](/img/diy/example_built_spi.jpg)
-
-| Display | GPIO |
-| ------- | ---- |
-| GND | GND |
-| VCC/VDD | VCC / 3.3V |
-| SCL/CLK/SCK | GPIO 14 (D5) |
-| SDA/MOSI | GPIO 13 (D7) |
-| RST/RES/RESET | GPIO 5 (D1) |
-| DC | GPIO 4 (D2) |
-| CS | GPIO 15 (D8) **or** GND |
-
-| Button | GPIO |
-| ------ | ---- |
-| UP | GPIO 0 (D3) |
-| Down | GPIO 12 (D6) |
-| A | GPIO 2 (D4) |
-
-| NEOPIXEL LED | GPIO |
+| Light | GPIO |
 | ------ | ---- |
 | GND | GND |
-| VCC | VCC/3.3V |
-| DIN | GPIO 9 (SD2) |
-
-## Code adjustments
-When your hardware setup is done, you must make some code changes.  
-
-1) See [Installation](/docs/diy/installation-arduino) on how to compile and flash this project using Arduino.  
-
-2) In Arduino, under `tools` > `Deauther Config`, select `Display Example I2C` or `Display Example SPI` depending on your setup
-
-3) In Arduino open the `A_config.h` file (second tab)
-
-4) Scroll down to [`#if defined(DISPLAY_EXAMPLE_I2C)`](https://github.com/SpacehuhnTech/esp8266_deauther/blob/v2/esp8266_deauther/A_config.h#L64) or [`#elif defined(DISPLAY_EXAMPLE_SPI)`](https://github.com/SpacehuhnTech/esp8266_deauther/blob/v2/esp8266_deauther/A_config.h#L90). 
-
-5) If you used other pins than mentioned in the example setup above, this is where you can change them.  
-For example, you might need to change `#define SH1106_I2C` to `#define SSD1306_I2C` depending on the display you are using.  
-Or `#define SH1106_SPI` to `#define SSD1306_SPI` if you're using an SPI display.  
-
-6) In Arduino, under `tools` > `Erase Flash`, select `All Flash Contents`. This will make sure your changes are applied and override any old settings.  
-
-7) Make sure you selected the correct port and upload! If something isn't working correctly, check the connections and your adjustments from step 5.
+| VCC | GPIO 16 (D0) |
 
 ## Testing everything
 
-:::tip
-You can also use [serial.huhn.me](https://serial.huhn.me) to connect to your deauther. It's a web-based serial monitor I made. It requires Chrome for Desktop or a Chromium-based browser that supports the Web Serial API.
-:::
 
 When everything is correctly set up and uploaded, open the serial monitor with Arduino (Tools > Serial Monitor). 
 
