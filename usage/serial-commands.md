@@ -1,8 +1,4 @@
----
-title: 'Serial Commands'
-description: 'Reference for all available serial interface commands.'
-sidebar_position: 50
----
+___
 
 ## HELP
 `help`  
@@ -265,11 +261,11 @@ It will only work if you run a wifi scan first, i.e., `scan wifi -t 65s -ch 1`.
 `startap [-p <path][-s <ssid>] [-pswd <password>] [-ch <channel>] [-h] [-cp]`  
 Starts access point.  
 - **path** [-p] (optional, default = "/web"): Path to web files.  
-- **ssid** [-s] (optional, default = [settings ssid](/docs/usage/settings)): Network name.  
-- **password** [-pswd] (optional, default = [settings password](/docs/usage/settings)): Password.  
-- **channel** [-ch] (optional, default = [settings channel](/docs/usage/settings)): Channel .  
-- **hidden** [-h] (optional, default = [settings hidden](/docs/usage/settings)): Hide SSID.  
-- **captiveportal** [-cp] (optional, default = [settings captiveportal](/docs/usage/settings)): Enable captiveportal.  
+- **ssid** [-s] (optional, default = settings ssid): Network name.  
+- **password** [-pswd] (optional, default = settings password): Password.  
+- **channel** [-ch] (optional, default = settings channel): Channel .  
+- **hidden** [-h] (optional, default = settings hidden): Hide SSID.  
+- **captiveportal** [-cp] (optional, default = settings captiveportal): Enable captiveportal.  
 
 `stopap`  
 Stops access point.  
@@ -284,3 +280,4 @@ Changes display mode.
 - **packetmonitor**: draws packet graph (will only work when you're scanning at the same time)
 - **buttontest**: special mode for testing the buttons
 - **loading**: loading screen that is used when starting a scan over the display menu
+___
