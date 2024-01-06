@@ -6,7 +6,8 @@ An ESP8266_Deauther with Evil Twin attack and more
 - [Installation](./diy/installation-bin.md)
 - [Display and button Setup](./diy/display-setup.md)
 - [errors.md](./diy/errors.md)
-
+- [serial-commands](./usage/serial-commands.md)
+- [settings](./usage/settings.md)
 
 ## Functions
 
