@@ -1,1 +1,0 @@
-# DeautherX.com
