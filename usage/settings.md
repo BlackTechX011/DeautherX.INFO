@@ -1,8 +1,3 @@
----
-title: 'Settings'
-description: 'Deauther settings explained and how to change them.'
-sidebar_position: 40
----
 
 | Setting          | Default                                                                                     | Info                                                                                                                                                                                         |
 |------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +33,7 @@ sidebar_position: 40
 
 ## Changing Settings (Web Interface)
 
-![ESP8266 Deauther V2 Settings page](/img/usage/settings1.png)
+![ESP8266 Deauther Settings page](/img/usage/settings1.png)
 
 1. Connect to the WiFi network `pwned`with password `deauther`
 2. Open `192.168.4.1` in a browser
@@ -48,11 +43,8 @@ sidebar_position: 40
 
 ## Changing Settings (Serial)
 
-:::info
-You need a serial connection for this one. See [Serial Interface](/docs/usage/serial) for more info.
-:::
 
-1. Open a Serial Terminal of your choice (for example [serial.huhn.me](https://serial.huhn.me))
+1. Open a Serial Terminal of your choice
 2. Connect your Deauther/ESP8266 Board (115200baud, \n)
 3. To view your current settings type `get settings`
 4. To change a setting, use the set command. For example: `set password "my new cool pswd"`
