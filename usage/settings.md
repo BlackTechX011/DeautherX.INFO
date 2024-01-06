@@ -35,7 +35,7 @@
 
 ![ESP8266 Deauther Settings page](/img/usage/settings1.png)
 
-1. Connect to the WiFi network `pwned`with password `deauther`
+1. Connect to the WiFi network `DeautherX`with password `BlackTechX`
 2. Open `192.168.4.1` in a browser
 3. Navigate to Settings (navbar on the right)
 4. Adjust the settings to your preference
