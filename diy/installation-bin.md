@@ -5,6 +5,8 @@ ___
 <kbd> <br> [errors.md](./diy/errors.md) <br> </kbd>
 <kbd> <br> [serial-commands](./usage/serial-commands.md) <br> </kbd>
 <kbd> <br> [settings](./usage/settings.md) <br> </kbd>
+
+___
 1. Get a .bin file for your board from [deautherX GitHub](https://github.com/BlackTechX011/DeautherX)
 2. Open NodMCU Flasher Tool
 3. Connect your ESP8266 board via USB
