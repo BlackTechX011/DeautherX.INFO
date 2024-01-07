@@ -5,6 +5,7 @@ ____
 <kbd> <br> [errors.md](./diy/errors.md) <br> </kbd>
 <kbd> <br> [serial-commands](./usage/serial-commands.md) <br> </kbd>
 <kbd> <br> [settings](./usage/settings.md) <br> </kbd>
+___
 ## Before you continue
 Using the display interface is entirely optional. You can also control the Deauther via serial or the web interface.  
 
