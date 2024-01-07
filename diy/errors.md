@@ -5,6 +5,7 @@ ____
 <kbd> <br> [errors.md](./diy/errors.md) <br> </kbd>
 <kbd> <br> [serial-commands](./usage/serial-commands.md) <br> </kbd>
 <kbd> <br> [settings](./usage/settings.md) <br> </kbd>
+___
 ## "error: espcomm_open failed"
 
 ![ESP8266 upload error in Arduino](/img/diy/espcomm.png)
