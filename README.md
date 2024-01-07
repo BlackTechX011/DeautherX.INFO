@@ -1,13 +1,13 @@
 ________
+<kbd> <br> [supported-devices](../diy/supported-devices.md) <br> </kbd>
+<kbd> <br> [Installation](../diy/installation-bin.md) <br> </kbd>
+<kbd> <br> [Display and button Setup](../diy/display-setup.md) <br> </kbd>
+<kbd> <br> [errors.md](../diy/errors.md) <br> </kbd>
+<kbd> <br> [serial-commands](../usage/serial-commands.md) <br> </kbd>
+<kbd> <br> [settings](../usage/settings.md) <br> </kbd>
+___
 # DeautherX
 An ESP8266_Deauther with Evil Twin attack and more
-
-- [supported-devices](.//diy/supported-devices.md)
-- [Installation](./diy/installation-bin.md)
-- [Display and button Setup](./diy/display-setup.md)
-- [errors.md](./diy/errors.md)
-- [serial-commands](./usage/serial-commands.md)
-- [settings](./usage/settings.md)
 
 ## Functions
 
