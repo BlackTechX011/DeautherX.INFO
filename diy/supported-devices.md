@@ -1,5 +1,11 @@
 ___
-
+<kbd> <br> [supported-devices](./diy/supported-devices.md) <br> </kbd>
+<kbd> <br> [Installation](./diy/installation-bin.md) <br> </kbd>
+<kbd> <br> [Display and button Setup](./diy/display-setup.md) <br> </kbd>
+<kbd> <br> [errors.md](./diy/errors.md) <br> </kbd>
+<kbd> <br> [serial-commands](./usage/serial-commands.md) <br> </kbd>
+<kbd> <br> [settings](./usage/settings.md) <br> </kbd>
+___
 The most important things first:
 * Any ESP8266-based development board can run the Deauther firmware
 * ESP8285 is also supported (basically the same as ESP8266 but with internal flash)
