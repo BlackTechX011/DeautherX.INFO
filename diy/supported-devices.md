@@ -59,6 +59,5 @@ If you want an easy way to add a battery to your Deauther, this is the board for
 (You can flash it with the same .bin file as the NodeMCU)
 
 - https://www.adafruit.com/product/2821
-___ ,lp[]
-412+33+3
+___ 
   
