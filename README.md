@@ -1,4 +1,37 @@
 ________
+<div align="center">
+    <kbd>
+        <br>
+        <a href="../diy/supported-devices.md">supported-devices</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/installation-bin.md">Installation</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/display-setup.md">Display and button Setup</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/errors.md">errors.md</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/serial-commands.md">serial-commands</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/settings.md">settings</a>
+        <br>
+    </kbd>
+</div>
+
 - [supported-devices](./diy/supported-devices.md)
 - [Installation](./diy/installation-bin.md)
 - [Display and button Setup](./diy/display-setup.md)
