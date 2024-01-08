@@ -4,7 +4,7 @@ ________
 - [Installation](./diy/installation-bin.md)
 - [Display and button Setup](./diy/display-setup.md)
 - [errors.md](./diy/errors.md)
-- [serial-commands](../usage/serial-commands.md)
+- [serial-commands](./usage/serial-commands.md)
 - [settings](./usage/settings.md)
   
 ___
