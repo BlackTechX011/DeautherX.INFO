@@ -1,11 +1,40 @@
-____
-<kbd> <br> [supported-devices](../diy/supported-devices.md) <br> </kbd>
-<kbd> <br> [Installation](../diy/installation-bin.md) <br> </kbd>
-<kbd> <br> [Display and button Setup](../diy/display-setup.md) <br> </kbd>
-<kbd> <br> [errors.md](../diy/errors.md) <br> </kbd>
-<kbd> <br> [serial-commands](../usage/serial-commands.md) <br> </kbd>
-<kbd> <br> [settings](../usage/settings.md) <br> </kbd>
-___
+---
+
+<div align="center">
+    <kbd>
+        <br>
+        <a href="../diy/supported-devices.md">supported-devices</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/installation-bin.md">Installation</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/display-setup.md">Display and button Setup</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/errors.md">errors.md</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/serial-commands.md">serial-commands</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/settings.md">settings</a>
+        <br>
+    </kbd>
+</div>
+
+---
+
 ## "error: espcomm_open failed"
 
 ![ESP8266 upload error in Arduino](/img/diy/espcomm.png)
@@ -15,15 +44,15 @@ The espcomm_open error is not a compiler error. It appears when you try to uploa
 
 Besides *espcomm_open*, other common errors include *espcomm_sync* and *Timed out waiting for packet header*.
 
-```
 warning: espcomm_sync failed
 error: espcomm_open failed
 Failed to connect to ESP8266: Timed out waiting for packet header
-serial.serialutil.SerialTimeoutException: Write timeout 
-  does not exist or your board is not connected
-```
+serial.serialutil.SerialTimeoutException: Write timeout
+does not exist or your board is not connected
 
-Error messages
+
+### Error messages
+
 [Esptool ](https://github.com/espressif/esptool)is a python script made for flashing the ESP32 or ESP8266. It can be used directly through the command line or indirectly through an IDE like Arduino.
 
 If it fails to open a connection to your development board, check these things: 
@@ -63,7 +92,7 @@ Below is a list of those chips with links to their manufacturer's drivers' downl
 
 The CH340/CH341 is a very common USB to serial chip family, used often in cheap development boards thanks to its affordable pricing.
 
-<Button href='http://www.wch-ic.com/downloads/CH341SER_ZIP.html' target='_blank' variant='contained'>Download CH340/CH341 Drivers</Button>
+[Download CH340/CH341 Drivers](http://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
 ### CP210x
 
@@ -71,7 +100,7 @@ The CH340/CH341 is a very common USB to serial chip family, used often in cheap 
 
 Due to their speed and small form factor, the CP2102 and CP2104 from Silicon Labs are popular among most development boards.
 
-<Button href='https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers' target='_blank' variant='contained'>Download CP210x Drivers</Button>
+[Download CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 
 ### FTDI
 
@@ -79,7 +108,7 @@ Due to their speed and small form factor, the CP2102 and CP2104 from Silicon Lab
 
 FTDI Chip makes Hi-Speed USB serial ICs. For example, we used an FTDI chip for our Andromeda board.
 
-<Button href='https://ftdichip.com/drivers/' target='_blank' variant='contained'>Download FTDI Drivers</Button>
+[Download FTDI Drivers](https://ftdichip.com/drivers/)
 
 ## The USB connection
 
@@ -112,6 +141,6 @@ Make sure no other software is using the serial port.
 
 If nothing seems to work, try it on another computer.
 
-Still no luck? If you have tried everything mentioned here, and nothing seems to work, then maybe the hardware has an issue. Unfortunately, this can happen, especially with cheap development boards. Try reaching out to the seller or manufacturer. 
+Still no luck? If you have tried everything mentioned here, and nothing seems to work, then maybe the hardware has an issue. Unfortunately, this can happen, especially with cheap development boards. Try reaching out to the seller or manufacturer.
 
-____
+---
