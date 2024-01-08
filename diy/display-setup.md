@@ -1,18 +1,46 @@
-____
-<kbd> <br> [supported-devices](../diy/supported-devices.md) <br> </kbd>
-<kbd> <br> [Installation](../diy/installation-bin.md) <br> </kbd>
-<kbd> <br> [Display and button Setup](../diy/display-setup.md) <br> </kbd>
-<kbd> <br> [errors.md](../diy/errors.md) <br> </kbd>
-<kbd> <br> [serial-commands](../usage/serial-commands.md) <br> </kbd>
-<kbd> <br> [settings](../usage/settings.md) <br> </kbd>
-___
+---
+
+<div align="center">
+    <kbd>
+        <br>
+        <a href="../diy/supported-devices.md">supported-devices</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/installation-bin.md">Installation</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/display-setup.md">Display and button Setup</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../diy/errors.md">errors.md</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/serial-commands.md">serial-commands</a>
+        <br>
+    </kbd>
+    <kbd>
+        <br>
+        <a href="../usage/settings.md">settings</a>
+        <br>
+    </kbd>
+</div>
+
+---
+
 ## Before you continue
 Using the display interface is entirely optional. You can also control the Deauther via serial or the web interface.  
 
 We cannot start at 0 for this tutorial, so if you find this too tricky, get an Arduino starter kit with good documentation to get a feeling for tinkering with electronics. 😊
 
 I focused on the NodeMCU in this tutorial since it is one of the most popular dev-boards. But every other ESP8266-based board should work just the same.  
-
 
 ## What you need
 - A breadboard ([Amazon*](https://amzn.to/3HtxH9y), [AliExpress*](https://s.click.aliexpress.com/e/_DDdF6Tt))
@@ -23,7 +51,6 @@ I focused on the NodeMCU in this tutorial since it is one of the most popular de
 - Optional: an RGB LED (3 single LEDs or a Neopixel will also work) ([Amazon*](https://amzn.to/3Pn0bDJ), [AliExpress*](https://s.click.aliexpress.com/e/_DBmkHbV))
 - Optional but recommended: 2x 10k ohm resistors ([Amazon*](https://amzn.to/3PpEeEm), [AliExpress*](https://s.click.aliexpress.com/e/_DlZSG8x))
 - A working Arduino IDE setup that can compile this project (see [Installation](/docs/diy/installation-arduino))
-
 
 ## Wire everything up
 Look up the pinout references for your board. Here's one for the NodeMCU: 
@@ -47,10 +74,9 @@ We have a limited amount of pins, and not every pin can be used for everything:
 | SD2         | GPIO 9  | Used for Flash. Avoid this pin in QIO mode. |
 | SD3         | GPIO 10 | Used for Flash. Avoid this pin in QIO mode. |
 
-
 ### Buttons
 Connect each button to a GPIO and GND. 
-Like in this Arduino tutorial: https://www.arduino.cc/en/Tutorial/InputPullupSerial
+Like in this Arduino tutorial: [Input Pullup Serial Tutorial](https://www.arduino.cc/en/Tutorial/InputPullupSerial)
 
 ### LED
 The LED is used as an optional indicator. For example, Green = idle, Blue = scanning, and RED = deauth attack detected (when scanning).  
@@ -58,8 +84,7 @@ You can use single digital LEDs, an RGB LED, or a Neopixel LED (WS2812b).
 
 By default, the LED on GPIO 16 (NodeMCU onboard LED) and the LED on GPIO 2 (ESP-12 and ESP-07 on-module LED) are used.
 
-## setup with I2C OLED
-
+## Setup with I2C OLED
 
 | Display | GPIO |
 | ------- | ---- |
@@ -87,7 +112,6 @@ By default, the LED on GPIO 16 (NodeMCU onboard LED) and the LED on GPIO 2 (ESP-
 
 ## Testing everything
 
-
 When everything is correctly set up and uploaded, open the serial monitor with Arduino (Tools > Serial Monitor). 
 
 - **Set the baud rate to `115200` and select `Newline`.**  If you see it resetting every few seconds, check the code and make sure you didn't use the same pin twice.
@@ -98,5 +122,7 @@ When everything is correctly set up and uploaded, open the serial monitor with A
 
 - To test the LED(s), you can run `led <r> <g> <b>`. For example, `led 255 0 0` should turn the LED red.   
 
-If you still have problems with the display, try running an example to test if it's a software or a hardware problem. This is the display library used in the Deauther: https://github.com/squix78/esp8266-oled-ssd1306  
-You can find examples there. Try to get those running.  
+If you still have problems with the display, try running an example to test if it's a software or a hardware problem. This is the display library used in the Deauther: [esp8266-oled-ssd1306](https://github.com/squix78/esp8266-oled-ssd1306)  
+You can find examples there. Try to get those running.
+
+---
